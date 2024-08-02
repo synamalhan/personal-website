@@ -1,0 +1,407 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('assets/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #f5f5f5;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1a1a;
+    padding: 10px 20px;
+    height:80px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav .logo img {
+    width: 80px;
+    height: 80px;
+    margin-left: 100px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0 50px;
+    margin: 50px;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 30px;
+}
+
+nav ul li a {
+    text-decoration: double;
+    color: #f5f5f5;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+nav ul li.active a {
+    color: #aa00ff;
+}
+
+header {
+    margin-top: 50px;
+    padding: 50px 50px;
+}
+
+header img {
+    width: 430px;
+    height: 380px;
+}
+
+.home-image {
+    border-radius: 10%;
+    box-shadow: 0 0 35px rgba(197, 80, 255, 0.8);
+}
+
+header.home .intro {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 120px;
+}
+
+header.home h1 {
+    color: white;
+    text-shadow: 0 0 5px #ffffff;
+    margin-right: 20px;
+    font-size: 3em;
+}
+
+header.home h1 .purple {
+    color: #aa00ff;
+    text-shadow: 0 0 10px #aa00ff;
+}
+
+.typing-container {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid #aa00ff; /* Cursor effect */
+    animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #aa00ff; }
+}
+
+header.about,
+header.resume {
+    text-align: center;
+    margin: 50px;
+}
+
+header.about h1,
+header.resume h1,
+header.contact h1 {
+    color: #aa00ff;
+    text-shadow: 0 0 10px #aa00ff;
+    font-size: 3.5em;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-weight: bolder;
+}
+
+header.about .content{
+    max-width: 800px;
+    margin: auto;
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 2;
+}
+
+header.resume .content {
+    max-width: 800px;
+    margin: auto;
+    font-size: 1em;
+    text-align: center;
+    margin-bottom: 50px;
+    line-height: 2;
+}
+
+header.about .box-container {
+    position: relative;
+}
+
+header.about .box-container .box {
+    position: relative;
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    margin: 10px;
+    transition: box-shadow 0.3s ease;
+    float: left;
+}
+
+header.about .box-container .box.right {
+    float: right;
+}
+
+header.about .box-container .box-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+header.about .box-container .box-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-right: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #f5f5f5;
+    font-size: 0.9em;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    box-shadow: 0 0 10px rgba(170, 0, 255, 0.8);
+}
+
+header.about .box-container .box:hover .box-text {
+    opacity: 1;
+    box-shadow: 0 0 15px rgba(170, 0, 255, 0.8);
+}
+
+header.about .box-container .box:hover {
+    box-shadow: 0 0 25px rgba(170, 0, 255, 0.8);
+}
+
+.section-title {
+    color: #aa00ff;
+    text-shadow: 0 0 10px rgba(170, 0, 255, 0.8);
+    font-size: 2.5rem;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.education-section {
+    margin-bottom: 50px;
+}
+
+.experience-section {
+    margin-top: 100px;
+    margin-bottom: 150px;
+}
+
+.glowing-box {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    color: #f5f5f5;
+    text-align: center;
+    margin: 50px auto;
+    max-width: 800px; /* Adjust width as needed */
+    position: relative;
+}
+
+.box-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.college-logo {
+    width: 60px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 20px;
+}
+
+.college-info {
+    text-align: left;
+}
+
+.glowing-box h3 {
+    margin: 0;
+    font-size: 2em;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(170, 0, 255, 0.8);
+}
+
+.glowing-box p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+    color: #f5f5f5;
+}
+
+.duration {
+    font-size: 1.1em;
+    font-weight: lighter;
+}
+
+header.resume .timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, #ffffff, #aa00ff);
+    box-shadow: 0 0 10px #ffffff;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin: 20px 0;
+    width: calc(50% - 20px);
+}
+
+.timeline-item.left {
+    left: 0;
+}
+
+.timeline-item.right {
+    left: 50%;
+}
+
+.timeline-icon {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timeline-icon .dot {
+    width: 12px;
+    height: 12px;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #ffffff;
+}
+
+.timeline-content {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ffffff;
+}
+
+.timeline-content h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.timeline-content .company-logo {
+    width: 80px; 
+    height: auto;
+    margin-right: 10px; 
+}
+
+.timeline-content p {
+    font-weight: lighter;
+}
+
+.timeline-item.left .timeline-content {
+    margin-left: 30px;
+}
+
+.timeline-item.right .timeline-content {
+    margin-left: -30px;
+}
+
+.resume-download {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.resume-download a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid #aa00ff;
+    border-radius: 5px;
+    text-shadow: 0 0 10px #aa00ff;
+    font-size: 1.2em;
+}
+
+.resume-download a:hover {
+    background-color: #aa00ff;
+    color: #0f0f0f;
+}
+
+header.contact {
+    margin-top: 50px;
+    padding: 50px;
+    text-align: center;
+}
+
+header.contact .social-links {
+    margin-bottom: 30px;
+}
+
+header.contact .social-icon {
+    margin: 0 15px;
+    display: inline-block;
+}
+
+header.contact .social-icon img {
+    width: auto;
+    height: 40px;
+}
+
+header.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 1.2em;
+}
+
+header.contact form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+header.contact form input,
+header.contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #cf9bff;
+    border-radius: 5px;
+    background-color: #333;
+    color: #f5f5f5;
+}
+
+header.contact form button {
+    background-color: #aa00ff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+header.contact form button:hover {
+    background-color: #8e00cc;
+}
